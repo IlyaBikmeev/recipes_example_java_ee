@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+#  recipes_project:
+#    image: 6f9728a26d0a
+#    restart: always
+
+  db:
+    image: mysql
+    restart: always
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_DATABASE: recipes-top
+    ports:
+      - 3306:3306
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

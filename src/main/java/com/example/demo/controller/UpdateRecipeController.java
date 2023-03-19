@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "updateBookController", value = "/recipes/update")
-public class UpdateBookController extends HttpServlet {
+public class UpdateRecipeController extends HttpServlet {
 
     private final RecipeDao dao = SimpleRecipeDaoImpl.getInstance();
 

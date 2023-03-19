@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "deleteBookController", value = "/recipes/delete")
-public class DeleteBookController extends HttpServlet {
+public class DeleteRecipeController extends HttpServlet {
 
     private final RecipeDao dao = SimpleRecipeDaoImpl.getInstance();
 

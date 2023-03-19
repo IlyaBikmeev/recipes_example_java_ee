@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import com.example.demo.dao.RecipeDao;
+import com.example.demo.dao.RecipeDaoDbImpl;
 import com.example.demo.dao.SimpleRecipeDaoImpl;
 import com.example.demo.model.Recipe;
 
@@ -14,9 +15,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(name = "allBooksController", value="/recipes")
-public class AllBooksController extends HttpServlet {
+public class AllRecipesController extends HttpServlet {
 
-    private final RecipeDao dao = SimpleRecipeDaoImpl.getInstance();
+    private final RecipeDao dao = RecipeDaoDbImpl.getInstance();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
